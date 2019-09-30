@@ -208,6 +208,7 @@ function start() {
     --cpus 4 \
     --extra-config=apiserver.authorization-mode=RBAC \
     --extra-config=apiserver.cors-allowed-origins="http://*" \
+    --extra-config=kubeadm.ignore-preflight-errors=SystemVerification \
     --extra-config=apiserver.enable-admission-plugins="DefaultStorageClass,LimitRanger,MutatingAdmissionWebhook,NamespaceExists,NamespaceLifecycle,ResourceQuota,ServiceAccount,ValidatingAdmissionWebhook" \
     --kubernetes-version=v$KUBERNETES_VERSION \
     --vm-driver=$VM_DRIVER \
